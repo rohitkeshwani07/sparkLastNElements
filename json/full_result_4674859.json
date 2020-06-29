@@ -1,0 +1,1 @@
+{"event_name":"PAYMENT.VERIFICATION.INITIATED1","event_timestamp_raw":1592246222641996,"event_timestamp":1592246222,"properties":{"payment":{"method":"upi","issuer":"upi","id":"pay_F301QW0tppjSMZ"},"merchant":{"id":"Ba2to8xoI5kO2x"}},"created_date":"2020-06-16","consumer_timestamp":1592246221,"producer_timestamp":1592246224,"producer_created_date":"2020-06-16"}
