@@ -6,7 +6,6 @@ import org.apache.spark.sql.streaming.{GroupStateTimeout, OutputMode}
 import org.apache.spark.sql.types.{StringType, StructType, TimestampType}
 import src.main.scala.streaming.{FIFOBuffer, PaymentEvent, PaymentEventCount}
 import org.apache.spark.sql.streaming.GroupState
-import org.apache.spark.sql.functions.expr
 
 
 object StructuredStreaming {
@@ -93,7 +92,6 @@ object StructuredStreaming {
                               $"producer_timestamp" as "timestamp",
                               $"event_name" as "event_name")
                             .as[PaymentEvent]
-
 
     val asd = paymentEventsStream.withWatermark("timestamp", "2 minutes")
                             .groupByKey(p => (p.issuer, p.merchant_id))
